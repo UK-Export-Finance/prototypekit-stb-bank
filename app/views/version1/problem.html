@@ -1,0 +1,98 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  There is a problem – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/includes/primary-nav-upload-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Upload report</h1>
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+            <div role="alert">
+              <h2 class="govuk-error-summary__title">
+                There is a problem
+              </h2>
+              <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                  <li>
+                    <a href="#">You must correct the formatting errors before you can upload the report</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        
+          <div class="govuk-form-group govuk-form-group--error">
+            <h2 class="govuk-heading-m">Errors found in UKEF-facility-report-May-2023.xlsx</h2>
+            <p id="passport-issued-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> You must correct the formatting errors before you can upload the report
+                </p>
+        <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Column</th>
+                <th scope="col" class="govuk-table__header">Row</th>
+                <th scope="col" class="govuk-table__header">Error</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">A</td>
+                <td class="govuk-table__cell">9</td>
+                <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">B</td>
+                <td class="govuk-table__cell">6</td>
+                <td class="govuk-table__cell">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">D</td>
+                <td class="govuk-table__cell">7</td>
+                <td class="govuk-table__cell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+
+          <div class="govuk-form-group">
+
+            <h2 class="govuk-heading-m govuk-!-margin-bottom-6">Upload the report again</h2>              
+            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+          </div>
+          <div class="govuk-form-group">
+          <form class="form" action="check-filename-only" method="get">
+            {{ govukButton({
+                text: "Continue"
+              }) }}
+              <input type="hidden" name="report-uploaded" value="success">
+          </form>
+        </div>
+  
+    </div>      
+  
+  </div>
+
+{% endblock %}
+
+

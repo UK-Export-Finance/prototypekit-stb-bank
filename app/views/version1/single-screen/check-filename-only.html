@@ -1,0 +1,87 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Check uploaded report – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/version1/single-screen/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/single-screen/includes/primary-nav-nothing-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-6">Upload report</h1>
+
+    <dl class="govuk-summary-list">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            File added
+          </dt>
+          <dd class="govuk-summary-list__value">
+            UKEF-facility-report-May-2023.xlsx
+          </dd>
+        </div>
+      </dl>
+    
+
+      <form class="form" action="confirmation" method="post">
+        <input type="hidden" name="report-uploaded" value="true">
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+    
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    
+          Is this the correct report?
+    
+        </legend>
+    
+        <div class="govuk-radios" data-module="govuk-radios">
+    
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="yes" name="check" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="yes">
+              Yes, I want to submit this report
+            </label>
+    
+          </div>
+    
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="no" name="check" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="no">
+              No, I want to upload the report again
+            </label>
+    
+          </div>
+    
+        </div>
+       
+      </fieldset>
+    </div>
+      
+    {{ govukButton({
+      text: "Continue"
+    }) }}
+    
+    </form>
+
+</div>
+
+
+{% endblock %}

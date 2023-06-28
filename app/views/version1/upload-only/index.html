@@ -1,0 +1,94 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Home – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/upload-only/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/upload-only/includes/primary-nav-index-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Facility reporting</h1>
+
+    {% if 'false' in data['report-uploaded'] %} 
+    <!-- 1st visit to page show report due / download information -->
+      <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
+          <p class="govuk-body">All issued facilities must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
+          
+          <h2 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--m" for="event-name">
+             Upload report
+            </label>
+          </h2>
+
+          <div class="govuk-form-group">
+              
+            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+          </div>
+          <div class="govuk-form-group">
+          <form class="form" action="/version1/upload-only/problem" method="get">
+            {{ govukButton({
+                text: "Continue"
+              }) }}
+              <input type="hidden" name="report-uploaded" value="true">
+          </form>
+        </div>
+
+        {% elif 'true' in data['report-uploaded'] %} 
+        <!-- 1st visit to page show report due / download information -->
+          <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
+              <p class="govuk-body">All issued facilities must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
+             
+              <h2 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--m" for="event-name">
+                 Upload the completed report
+                </label>
+              </h2>
+    
+              <div class="govuk-form-group">
+                  
+                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+              </div>
+              <div class="govuk-form-group">
+              <form class="form" action="/version1/upload-only/problem" method="get">
+                {{ govukButton({
+                    text: "Continue"
+                  }) }}
+                  <input type="hidden" name="report-uploaded" value="success">
+              </form>
+            </div>
+
+    {% elif 'success' in data['report-uploaded'] %}
+    <!-- Report has been submitted - show different info -->      
+    <h2 class="govuk-heading-m">No report due</h2>
+
+    <p class="govuk-body">The {{ data['report-month'] }} report was submitted by {{ data['signed-in-name'] }} on {{ data['todays-date'] }} at 10:56am.</p>
+
+    <p class="govuk-body">The {{ data['next-month-report'] }} report template will be available to download on {{ data['start-next-month'] }}.</p>
+
+    <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
+
+    {% endif %}
+  </div>      
+
+</div>
+
+{% endblock %}
