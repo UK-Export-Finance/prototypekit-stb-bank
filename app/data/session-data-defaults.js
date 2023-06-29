@@ -4,6 +4,7 @@ module.exports = {
   
   'serviceNameBank': 'Santander – Facility reporting',
   'report-uploaded': 'false',
+  'file-name': 'UKEF-facility-report-May-2023.xlsx',
   'stb-email': 'stb.pim@ukexportfinance.gov.uk',
 
    // Names
