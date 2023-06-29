@@ -36,3 +36,20 @@ router.post('/version1/confirmation', function (req, res) {
   }
 
 })
+
+// Run this code when this form is submitted '/version1/upload-only/' on page /version1/upload-only/check-filename-only.html
+router.post('/version1/upload-only/', function (req, res) {
+
+  // Make a variable and give it the value from 'check' radios
+  var reportUploaded = req.session.data['report-uploaded']
+
+  // Check whether the variable matches a condition.
+  if (reportUploaded == "success"){
+    // Send user to confirmation screen
+    res.redirect('/version1/upload-only/confirmation')
+  } else {
+    // Send user to upload screen
+    res.redirect('/version1/upload-only/')
+  }
+
+})
