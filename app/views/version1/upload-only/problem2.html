@@ -48,43 +48,39 @@
             <p id="passport-issued-error" class="govuk-error-message">
                 <span class="govuk-visually-hidden">Error:</span> You must correct the formatting errors before you can upload the report
                 </p>
-        <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m"></caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Exporter</th>
-                <th scope="col" class="govuk-table__header">UKEF&nbsp;facility&nbsp;ID</th>
-                <th scope="col" class="govuk-table__header">Entry</th>
-                <th scope="col" class="govuk-table__header">Error</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
-                <td class="govuk-table__cell">{{ data['facility-1-ukef-id'] }}</td>
-                <td class="govuk-table__cell">Facility utilisation</td>
-                <td class="govuk-table__cell">Can only be a number, like 12,100.53<!--Must only include digits 0 to 9, a decimal point and commas--></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['facility-2-name'] }}</td>
-                <td class="govuk-table__cell">{{ data['facility-2-ukef-id'] }}</td>
-                <td class="govuk-table__cell">Facility utilisation</td>
-                <td class="govuk-table__cell">Cannot be more than 99,999,999.99</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
-                <td class="govuk-table__cell">{{ data['facility-4-ukef-id'] }}</td>
-                <td class="govuk-table__cell">Total fees accrued</td>
-                <td class="govuk-table__cell">Must have an entry</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">{{ data['facility-5-name'] }}</td>
-                <td class="govuk-table__cell">{{ data['facility-5-ukef-id'] }}</td>
-                <td class="govuk-table__cell">Currency monthly fee paid in</td>
-                <td class="govuk-table__cell">Must be a 3 character currency code such as GBP, EUR and USD</td>
-              </tr>
-            </tbody>
-          </table>
+
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Column</th>
+                        <th scope="col" class="govuk-table__header">Row</th>
+                        <th scope="col" class="govuk-table__header">Error</th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">F</td>
+                        <td class="govuk-table__cell">18</td>
+                        <td class="govuk-table__cell">Can only be a number, like 12,100.53</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">F</td>
+                        <td class="govuk-table__cell">19</td>
+                        <td class="govuk-table__cell">Cannot be more than 99,999,999.99</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">G</td>
+                        <td class="govuk-table__cell">21</td>
+                        <td class="govuk-table__cell">Must have an entry</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">I</td>
+                        <td class="govuk-table__cell">23</td>
+                        <td class="govuk-table__cell">Must be a 3 character currency code such as GBP, EUR and USD</td>
+                      </tr>
+                    </tbody>
+                  </table>
           </div> 
           
           <div class="govuk-form-group">

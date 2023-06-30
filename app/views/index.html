@@ -25,10 +25,26 @@ Bank spreadsheet upload – UK Export Finance – GOV.UK Prototype Kit
 
     <h1 class="govuk-heading-l">Bank spreadsheet upload</h1>
     <h2 class="govuk-heading-m">Version 1</h2>
-    <p class="govuk-body"><a href="/version1/upload-only/sign-in" class="govuk-link govuk-link--no-visited-state">Upload option only</a></p>
-    <p class="govuk-body">User journey: first time uploading a file the error screen appears, 2nd time uploading a file (from either the error screen or home screen) it's an error free upload. </p>
 
-    <p class="govuk-body">Remember to clear data to run through the journey again.</p>
+    <h3 class="govuk-heading-s">Error page journey</h3>
+    
+
+    <p class="govuk-body">First time uploading a file the error page appears, 2nd time uploading a file (from either the error page or home page) it's an error free upload. </p>
+
+    <div class="govuk-form-group">
+      <form class="form" action="/version1/upload-only/sign-in" method="get">
+        {{ govukButton({ text: "Error journey" }) }}
+        <input type="hidden" name="report-uploaded" value="false" />
+      </form>
+    </div>
+
+    <h3 class="govuk-heading-s">Happy path journey – no error page</h3>
+    <div class="govuk-form-group">
+      <form class="form" action="/version1/upload-only/sign-in" method="get">
+        {{ govukButton({ text: "Happy path" }) }}
+        <input type="hidden" name="report-uploaded" value="true" />
+      </form>
+    </div>
 
     <!--<p class="govuk-body govuk-!-font-size-19"><a href="/version1/sign-in" class="govuk-link govuk-link--no-visited-state">Download and upload on separate screens</a></p>
     <p class="govuk-body govuk-!-font-size-19"><a href="/version1/single-screen/sign-in" class="govuk-link govuk-link--no-visited-state">Download and upload on a single screen</a></p>-->
