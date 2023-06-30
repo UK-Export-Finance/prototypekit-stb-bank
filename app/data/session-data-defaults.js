@@ -2,7 +2,7 @@ module.exports = {
 
   // Insert values here
   
-  'serviceNameBank': 'Santander – Facility reporting',
+  'serviceNameBank': 'Newable – Facility reporting',
   'report-uploaded': 'false',
   'file-name': 'UKEF-facility-report-May-2023.xlsx',
   'stb-email': 'stb.pim@ukexportfinance.gov.uk',
@@ -41,7 +41,7 @@ module.exports = {
   'facility-1-updated': 'no',
   'facility-1-name': 'Britannia Energy Ltd',
   'facility-1-ukef-id': '0020001371',
-  'facility-1-ref': 'XXXX/XXX/XXXXXXXX',
+  'facility-1-ref': 'YJAP817',
   'facility-1-type': 'Contingent',
   'facility-1-type-short': 'Contingent',
   'facility-1-description': 'Letters of credit',
@@ -76,7 +76,7 @@ module.exports = {
   'facility-2-updated': 'no',
   'facility-2-name': 'British Tech Innovators Ltd',
   'facility-2-ukef-id': '0020001413',
-  'facility-2-ref': 'XXXX/XXX/XXXXXXXX',
+  'facility-2-ref': 'TUJD293',
   'facility-2-type': 'Contingent facility',
   'facility-2-type-short': 'Contingent',
   'facility-2-description': 'Guarantee',
@@ -109,7 +109,7 @@ module.exports = {
   // FACILITY 4 VALUES
   'facility-4-updated': 'no',
   'facility-4-name': 'NexGen Robotics Ltd',
-  'facility-4-ref': '	XXXX/XXX/XXXXXXXX',
+  'facility-4-ref': '	PNGV209',
   'facility-4-ukef-id': '	0020001499',
   'facility-4-type': 'Cash facility',
   'facility-4-type-short': 'Cash',
@@ -144,7 +144,7 @@ module.exports = {
   'facility-5-updated': 'no',
   'facility-5-name': 'Union Manufacturing Ltd',
   'facility-5-ukef-id': '0020001507',
-  'facility-5-ref': 'XXXX/XXX/XXXXXXXX',
+  'facility-5-ref': 'CHJY371',
   'facility-5-type': 'Cash facility',
   'facility-5-type-short': 'Cash',
   'facility-5-description': 'Loans',

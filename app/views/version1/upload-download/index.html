@@ -5,11 +5,11 @@
 {% endblock %}
 
 {% block header %}
-  {% include "/version1/single-screen/includes/head.html" %}
+  {% include "/version1/upload-download/includes/head.html" %}
   <div class="moj-header__container">
     {% include "/includes/phase-banner.html" %}
   </div>
-  {% include "/version1/single-screen/includes/primary-nav-index-selected.html" %}
+  {% include "/version1/upload-download/includes/primary-nav-index-selected.html" %}
 {% endblock %}
 
 {% block pageScripts %}
@@ -31,7 +31,7 @@
     {% if 'false' in data['report-uploaded'] %} 
     <!-- 1st visit to page show report due / download information -->
       <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
-          <p class="govuk-body">All issued facilities must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
+          <p class="govuk-body"><a href="facilities" class="govuk-link">All issued facilities<a href="#" class="govuk-link"></a> must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
           <p class="govuk-body"><a href="#" class="govuk-link">Download the UKEF {{ data['report-month'] }} template.xlsx (95kB)</a></p>
           
           <h2 class="govuk-label-wrapper">

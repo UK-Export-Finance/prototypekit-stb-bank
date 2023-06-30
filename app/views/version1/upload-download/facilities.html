@@ -1,0 +1,81 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Home – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/upload-download/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/upload-download/includes/primary-nav-facilities-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l govuk-!-margin-bottom-2">Issued facilities</h1>
+
+    <table class="govuk-table" data-module="moj-sortable-table">
+        <caption class="govuk-table__caption govuk-table__caption--l"></caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header" aria-sort="none">Bank reference</th>
+            <th scope="col" class="govuk-table__header" aria-sort="ascending">UKEF facility ID</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Exporter</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Value (export currency)</th>
+
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" >{{ data['facility-1-ref'] }}</td>
+            <td class="govuk-table__cell"><a href="facility1">{{ data['facility-1-ukef-id'] }}</a></td>
+            <td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-1-base-currency'] }} {{ data['facility-1-limit'] }}</td>
+
+          </tr>
+  
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">{{ data['facility-2-ref'] }}</td>
+            <td class="govuk-table__cell"><a href="facility2">{{ data['facility-2-ukef-id'] }}</a></td>
+            <td class="govuk-table__cell">{{ data['facility-2-name'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-2-base-currency'] }} {{ data['facility-2-limit'] }}</td>
+
+          </tr>
+  
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">{{ data['facility-4-ref'] }}</td>
+            <td class="govuk-table__cell"><a href="facility4">{{ data['facility-4-ukef-id'] }}</a></td>
+            <td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-4-base-currency'] }} {{ data['facility-4-limit'] }}</td>
+
+          </tr>
+  
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">{{ data['facility-5-ref'] }}</td>
+            <td class="govuk-table__cell"><a href="facility5">{{ data['facility-5-ukef-id'] }}</a></td>
+            <td class="govuk-table__cell">{{ data['facility-5-name'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-5-base-currency'] }} {{ data['facility-5-limit'] }}</td>
+
+          </tr>
+        </tbody>
+      </table>
+
+  </div>      
+
+</div>
+
+{% endblock %}
