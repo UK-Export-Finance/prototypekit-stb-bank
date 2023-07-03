@@ -9,3 +9,11 @@
 table.govuk-body-s {
     font-size: 1rem;
   }
+
+  @media print {
+
+    body {
+      .govuk-error-summary {display:none}
+    }
+  
+  }
