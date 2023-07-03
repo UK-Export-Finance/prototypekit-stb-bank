@@ -24,74 +24,87 @@
 
 <div class="govuk-grid-row">
 
-    <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Upload report</h1>
-        <div class="govuk-error-summary" data-module="govuk-error-summary">
-            <div role="alert">
-              <h2 class="govuk-error-summary__title">
-                There is a problem
-              </h2>
-              <div class="govuk-error-summary__body">
-                <ul class="govuk-list govuk-error-summary__list">
-                  <li>
-                    <a href="#">You must correct the formatting errors before you can upload the report</a>
-                  </li>
-                </ul>
-              </div>
+  <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-l">Check report</h1>
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#error">You must correct the formatting errors before you can upload the report</a>
+                </li>
+              </ul>
             </div>
           </div>
-        
-          <div class="govuk-form-group govuk-form-group--error">
-            <h2 class="govuk-heading-m">Errors found in {{ data['file-name'] }}</h2>
-            <p id="passport-issued-error" class="govuk-error-message">
-                <span class="govuk-visually-hidden">Error:</span> You must correct the formatting errors before you can upload the report
-                </p>
-        <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m"></caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Column</th>
-                <th scope="col" class="govuk-table__header">Row</th>
-                <th scope="col" class="govuk-table__header">Error</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">A</td>
-                <td class="govuk-table__cell">9</td>
-                <td class="govuk-table__cell">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">B</td>
-                <td class="govuk-table__cell">6</td>
-                <td class="govuk-table__cell">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">D</td>
-                <td class="govuk-table__cell">7</td>
-                <td class="govuk-table__cell">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
-
-          <div class="govuk-form-group">
-
-            <h2 class="govuk-heading-m govuk-!-margin-bottom-6">Upload the report again</h2>
-            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
-          </div>
-          <div class="govuk-form-group">
-          <form class="form" action="check" method="get">
-            {{ govukButton({
-                text: "Continue"
-              }) }}
-              <input type="hidden" name="report-uploaded" value="success">
-          </form>
         </div>
-  
-    </div>      
-  
-  </div>
+        
+        <p class="govuk-body">You can <a href="/public/downloads/errors-test-doc.pdf" class="govuk-link--no-visited-state" target="_blank">create a PDF of the errors (opens in a new window or tab)</a>.</p>
+
+        <div class="govuk-form-group govuk-form-group--error govuk-!-margin-top-7">
+          <h2 class="govuk-heading-m" id="error">Errors found in {{ data['file-name'] }}</h2>
+          <p id="passport-issued-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> You must correct the formatting errors before you can upload the report
+              </p>
+      <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Exporter</th>
+              <th scope="col" class="govuk-table__header">UKEF&nbsp;facility&nbsp;ID</th>
+              <th scope="col" class="govuk-table__header">Entry</th>
+              <th scope="col" class="govuk-table__header">Error</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
+              <td class="govuk-table__cell">{{ data['facility-1-ukef-id'] }}</td>
+              <td class="govuk-table__cell">Facility utilisation</td>
+              <td class="govuk-table__cell">Can only be a number, like 12,100.53<!--Must only include digits 0 to 9, a decimal point and commas--></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">{{ data['facility-2-name'] }}</td>
+              <td class="govuk-table__cell">{{ data['facility-2-ukef-id'] }}</td>
+              <td class="govuk-table__cell">Facility utilisation</td>
+              <td class="govuk-table__cell">Cannot be more than 99,999,999.99</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
+              <td class="govuk-table__cell">{{ data['facility-4-ukef-id'] }}</td>
+              <td class="govuk-table__cell">Total fees accrued</td>
+              <td class="govuk-table__cell">Must have an entry</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">{{ data['facility-5-name'] }}</td>
+              <td class="govuk-table__cell">{{ data['facility-5-ukef-id'] }}</td>
+              <td class="govuk-table__cell">Currency monthly fee paid in</td>
+              <td class="govuk-table__cell">Must be a 3 character currency code such as GBP, EUR and USD</td>
+            </tr>
+          </tbody>
+        </table>
+        </div> 
+        
+        <div class="govuk-form-group">
+
+          <h2 class="govuk-heading-m">Upload the report again</h2>
+          <p class="govuk-body">You can upload the corrected report now or come back later and upload it.</p>
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+        </div>
+        <div class="govuk-form-group">
+        <form class="form" action="check-filename" method="get">
+          {{ govukButton({
+              text: "Continue"
+            }) }}
+            <!--<input type="hidden" name="report-uploaded" value="success">-->
+        </form>
+      </div>
+
+  </div>      
+
+</div>
 
 {% endblock %}
 

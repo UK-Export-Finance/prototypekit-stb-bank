@@ -36,8 +36,7 @@
             <th scope="col" class="govuk-table__header" aria-sort="none">Bank reference</th>
             <th scope="col" class="govuk-table__header" aria-sort="ascending">UKEF facility ID</th>
             <th scope="col" class="govuk-table__header" aria-sort="none">Exporter</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Base currency</th>
-            <th scope="col" class="govuk-table__header" aria-sort="none">Value</th>
+            <th scope="col" class="govuk-table__header" aria-sort="none">Value (export currency)</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -45,158 +44,138 @@
             <td class="govuk-table__cell">{{ data['facility-1-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-1-ukef-id'] }}"><a href="facility1">{{ data['facility-1-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-1-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-1-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-1-base-currency'] }} {{ data['facility-1-limit'] }}</td>
           </tr>
   
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-2-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-2-ukef-id'] }}"><a href="facility2">{{ data['facility-2-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-2-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-2-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-2-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-2-base-currency'] }} {{ data['facility-2-limit'] }}</td>
           </tr>
   
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-4-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-4-ukef-id'] }}"><a href="facility4">{{ data['facility-4-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-4-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-4-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-4-base-currency'] }} {{ data['facility-4-limit'] }}</td>
           </tr>
   
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-5-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-5-ukef-id'] }}"><a href="facility5">{{ data['facility-5-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-5-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-5-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-5-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-5-base-currency'] }} {{ data['facility-5-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-10-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-10-ukef-id'] }}"><a href="#">{{ data['facility-10-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-10-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-10-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-10-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-10-base-currency'] }} {{ data['facility-10-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-11-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-11-ukef-id'] }}"><a href="#">{{ data['facility-11-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-11-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-11-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-11-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-11-base-currency'] }} {{ data['facility-11-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-12-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-12-ukef-id'] }}"><a href="#">{{ data['facility-12-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-12-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-12-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-12-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-12-base-currency'] }} {{ data['facility-12-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-13-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-13-ukef-id'] }}"><a href="#">{{ data['facility-13-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-13-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-13-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-13-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-13-base-currency'] }} {{ data['facility-13-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-14-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-14-ukef-id'] }}"><a href="#">{{ data['facility-14-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-14-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-14-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-14-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-14-base-currency'] }} {{ data['facility-14-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-15-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-15-ukef-id'] }}"><a href="#">{{ data['facility-15-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-15-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-15-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-15-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-15-base-currency'] }} {{ data['facility-15-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-16-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-16-ukef-id'] }}"><a href="#">{{ data['facility-16-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-16-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-16-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-16-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-16-base-currency'] }} {{ data['facility-16-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-17-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-17-ukef-id'] }}"><a href="#">{{ data['facility-17-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-17-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-17-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-17-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-17-base-currency'] }} {{ data['facility-17-limit'] }}</td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-18-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-18-ukef-id'] }}"><a href="#">{{ data['facility-18-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-18-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-18-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-18-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-18-base-currency'] }} {{ data['facility-18-limit'] }}</td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-19-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-19-ukef-id'] }}"><a href="#">{{ data['facility-19-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-19-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-19-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-19-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-19-base-currency'] }} {{ data['facility-19-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-20-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-20-ukef-id'] }}"><a href="#">{{ data['facility-20-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-20-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-20-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-20-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-20-base-currency'] }} {{ data['facility-20-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-21-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-21-ukef-id'] }}"><a href="#">{{ data['facility-21-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-21-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-21-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-21-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-21-base-currency'] }} {{ data['facility-21-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-22-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-22-ukef-id'] }}"><a href="#">{{ data['facility-22-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-22-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-22-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-22-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-22-base-currency'] }} {{ data['facility-22-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-23-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-23-ukef-id'] }}"><a href="#">{{ data['facility-23-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-23-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-23-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-23-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-23-base-currency'] }} {{ data['facility-23-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-24-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-24-ukef-id'] }}"><a href="#">{{ data['facility-24-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-24-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-24-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-24-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-24-base-currency'] }} {{ data['facility-24-limit'] }}</td>
           </tr>
 
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">{{ data['facility-25-ref'] }}</td>
             <td class="govuk-table__cell" data-sort-value="{{ data['facility-25-ukef-id'] }}"><a href="#">{{ data['facility-25-ukef-id'] }}</a></td>
             <td class="govuk-table__cell">{{ data['facility-25-name'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-25-base-currency'] }}</td>
-            <td class="govuk-table__cell">{{ data['facility-25-limit'] }}</td>
+            <td class="govuk-table__cell" data-sort-value="">{{ data['facility-25-base-currency'] }} {{ data['facility-25-limit'] }}</td>
           </tr>
         </tbody>
       </table>

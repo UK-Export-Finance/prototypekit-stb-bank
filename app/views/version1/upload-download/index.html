@@ -16,10 +16,6 @@
   {% include "includes/scripts.html" %}
 {% endblock %}
 
-{% block beforeContent %}
-  
-{% endblock %}
-
 {% block content %}
 
 <div class="govuk-grid-row">
@@ -31,7 +27,7 @@
     {% if 'false' in data['report-uploaded'] %} 
     <!-- 1st visit to page show report due / download information -->
       <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
-          <p class="govuk-body"><a href="facilities" class="govuk-link">All issued facilities<a href="#" class="govuk-link"></a> must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
+          <p class="govuk-body"><a href="facilities" class="govuk-link govuk-link--no-visited-state">All issued facilities</a> must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
           <p class="govuk-body"><a href="#" class="govuk-link">Download the UKEF {{ data['report-month'] }} template.xlsx (95kB)</a></p>
           
           <h2 class="govuk-label-wrapper">
@@ -42,10 +38,10 @@
 
           <div class="govuk-form-group">
               
-            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint"> 
           </div>
           <div class="govuk-form-group">
-          <form class="form" action="problem" method="get">
+            <form class="form" action="/version1/upload-download/problem" method="get">
             {{ govukButton({
                 text: "Continue"
               }) }}
@@ -56,7 +52,8 @@
         {% elif 'true' in data['report-uploaded'] %} 
         <!-- 1st visit to page show report due / download information -->
           <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
-              <p class="govuk-body">All issued facilities must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
+          <p class="govuk-body"><a href="facilities" class="govuk-link govuk-link--no-visited-state">All issued facilities</a> must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
+
               <p class="govuk-body"><a href="#" class="govuk-link">Download the UKEF {{ data['report-month'] }} template.xlsx (95kB)</a></p>
               
               <h2 class="govuk-label-wrapper">
@@ -70,7 +67,7 @@
                 <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
               </div>
               <div class="govuk-form-group">
-              <form class="form" action="problem" method="get">
+              <form class="form" action="check-filename" method="get">
                 {{ govukButton({
                     text: "Continue"
                   }) }}
