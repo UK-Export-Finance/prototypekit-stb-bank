@@ -2,7 +2,7 @@ module.exports = {
 
   // Insert values here
   
-  'serviceNameBank': 'Newable – Facility reporting',
+  'serviceNameBank': 'Santander – Facility reporting',
   'report-uploaded': 'false',
   'file-name': 'UKEF-facility-report-June-2023.xlsx',
   'stb-email': 'stb.pim@ukexportfinance.gov.uk',
