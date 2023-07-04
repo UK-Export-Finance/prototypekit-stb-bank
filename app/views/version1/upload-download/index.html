@@ -27,14 +27,16 @@
     {% if 'due' in data['report-uploaded'] %} 
     <!-- 1st visit to page show report due / download information -->
       <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
-          <p class="govuk-body">All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
-          <button class="govuk-button" data-module="govuk-button">
-            Download {{ data['report-month'] }} template
-          </button>
+          <p class="govuk-body">All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} Excel template.</p>
+          <form class="form" action="/public/downloads/UKEF-facility-report-June-2023.xlsx" method="get">
+            <button class="govuk-button" data-module="govuk-button">
+              Download {{ data['report-month'] }} Excel template
+            </button>
+          </form>
 
     {% elif 'sent' in data['report-uploaded'] %}
     <!-- Report has been submitted - show different info -->      
-    <h2 class="govuk-heading-m">No report due</h2>
+    <h2 class="govuk-heading-m">Report not due</h2>
 
     <p class="govuk-body">The {{ data['report-month'] }} report was sent to UKEF by {{ data['signed-in-name'] }} on {{ data['todays-date'] }} at 10:56am.</p>
 
@@ -43,15 +45,15 @@
     <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
 
     {% elif 'overdue' in data['report-uploaded'] %}
-    <!-- 2nd visit to page - upload will be a success -->
+    <!-- Report is overdue -->
     <h2 class="govuk-heading-m">{{ data['report-month'] }} report is overdue</h2>
     
     <div class="govuk-inset-text">
-      All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> using the UKEF {{ data['report-month'] }} template.
+      All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> using the UKEF {{ data['report-month'] }} Excel template.
     </div>
 
     <button class="govuk-button" data-module="govuk-button">
-      Download {{ data['report-month'] }} template
+      Download {{ data['report-month'] }} Excel template
     </button>
     {% endif %}
   </div>      
