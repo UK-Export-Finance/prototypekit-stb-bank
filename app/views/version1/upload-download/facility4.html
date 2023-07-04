@@ -82,7 +82,7 @@
             Facility base currency
           </dt>
           <dd class="govuk-summary-list__value">
-            GBP
+            {{ data['facility-4-base-currency'] }}
           </dd>
           <dd class="govuk-summary-list__actions">
           </dd>
@@ -98,7 +98,7 @@
               Value (export currency)
             </dt>
             <dd class="govuk-summary-list__value govuk-!-width-one-half">
-              GBP {{ data['facility-4-limit'] }}
+              {{ data['facility-4-base-currency'] }} {{ data['facility-4-limit'] }}
             </dd>
             
           </div>
@@ -117,7 +117,7 @@
               Maximum UKEF exposure
             </dt>
             <dd class="govuk-summary-list__value">
-              GBP {{ data['facility-4-max'] }}
+              {{ data['facility-4-base-currency'] }} {{ data['facility-4-max'] }}
             </dd>
           </div>
         </dl> 
@@ -136,7 +136,7 @@
             Facility utilisation
           </dt>
           <dd class="govuk-summary-list__value govuk-!-width-one-half">
-            GBP {{ data['facility-4-utilisation'] }}
+            {{ data['facility-4-base-currency'] }} {{ data['facility-4-utilisation'] }}
           </dd>
         </div>
         <div class="govuk-summary-list__row">
@@ -144,7 +144,7 @@
             UKEF exposure
           </dt>
           <dd class="govuk-summary-list__value">
-            GBP {{ data['facility-4-exposure'] }}
+            {{ data['facility-4-base-currency'] }} {{ data['facility-4-exposure'] }}
           </dd>
 
         </div>
@@ -153,7 +153,7 @@
             Fee paid to UKEF
           </dt>
           <dd class="govuk-summary-list__value">
-            GBP {{ data['facility-4-paid'] }} 
+            {{ data['facility-4-base-currency'] }} {{ data['facility-4-paid'] }} 
           </dd>
 
         </div>
@@ -162,7 +162,7 @@
             Fees accrued
           </dt>
           <dd class="govuk-summary-list__value">
-            GBP {{ data['facility-4-accrued'] }} 
+            {{ data['facility-4-base-currency'] }} {{ data['facility-4-accrued'] }} 
           </dd>
 
         </div>

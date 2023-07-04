@@ -1,0 +1,70 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Upload report – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/upload-download/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/upload-download/includes/primary-nav-upload-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+  
+      <div class="govuk-form-group">
+  
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="event-name">
+           Upload report
+          </label>
+        </h1>
+  
+        {% if ('due' in data['report-uploaded']) or ('overdue' in data['report-uploaded']) %}  
+        <!-- 1st visit to page show report due / download information -->
+        <div class="govuk-form-group">
+          <p class="govuk-body">You must use the UKEF <a class="govuk-link--no-visited-state" href="index">{{ data['report-month'] }} template</a>.</p>
+            
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+        </div>
+        
+
+        {% if 'first-time' in data['visited'] %}
+        <div class="govuk-form-group">
+            <form class="form" action="problem" method="get">
+            {{ govukButton({
+                text: "Continue"
+                }) }}
+                <input type="hidden" name="visited" value="once-already">
+            </form>
+        </div>
+        {% elif 'once-already' in data['visited'] %}
+        <div class="govuk-form-group">
+            <form class="form" action="check-upload" method="get">
+            {{ govukButton({
+                text: "Continue"
+                }) }}
+            </form>
+        </div>
+        {% endif %}
+      
+  
+      {% elif 'sent' in data['report-uploaded'] %}
+      <!-- Report has been submitted - show different info -->
+      <p class="govuk-body">The {{ data['report-month'] }} report has already been sent to UKEF.</p>
+      <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
+      {% endif %}
+  
+  </div>
+
+{% endblock %}

@@ -17,7 +17,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-  
+<a class="govuk-back-link" href="upload">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -25,7 +25,7 @@
 <div class="govuk-grid-row">
 
   <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-l">Check report</h1>
+      <h1 class="govuk-heading-l">Check the report</h1>
       <div class="govuk-error-summary" data-module="govuk-error-summary">
           <div role="alert">
             <h2 class="govuk-error-summary__title">
@@ -48,43 +48,55 @@
           <p id="passport-issued-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span> You must correct the formatting errors before you can upload the report
               </p>
-      <table class="govuk-table">
-          <caption class="govuk-table__caption govuk-table__caption--m"></caption>
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Exporter</th>
-              <th scope="col" class="govuk-table__header">UKEF&nbsp;facility&nbsp;ID</th>
-              <th scope="col" class="govuk-table__header">Entry</th>
-              <th scope="col" class="govuk-table__header">Error</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
-              <td class="govuk-table__cell">{{ data['facility-1-ukef-id'] }}</td>
-              <td class="govuk-table__cell">Facility utilisation</td>
-              <td class="govuk-table__cell">Can only be a number, like 12,100.53<!--Must only include digits 0 to 9, a decimal point and commas--></td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">{{ data['facility-2-name'] }}</td>
-              <td class="govuk-table__cell">{{ data['facility-2-ukef-id'] }}</td>
-              <td class="govuk-table__cell">Facility utilisation</td>
-              <td class="govuk-table__cell">Cannot be more than 99,999,999.99</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
-              <td class="govuk-table__cell">{{ data['facility-4-ukef-id'] }}</td>
-              <td class="govuk-table__cell">Total fees accrued</td>
-              <td class="govuk-table__cell">Must have an entry</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">{{ data['facility-5-name'] }}</td>
-              <td class="govuk-table__cell">{{ data['facility-5-ukef-id'] }}</td>
-              <td class="govuk-table__cell">Currency monthly fee paid in</td>
-              <td class="govuk-table__cell">Must be a 3 character currency code such as GBP, EUR and USD</td>
-            </tr>
-          </tbody>
-        </table>
+              <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m"></caption>
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Exporter</th>
+                    <th scope="col" class="govuk-table__header">Row</th>
+                    <th scope="col" class="govuk-table__header">Column</th>
+                    <th scope="col" class="govuk-table__header">Entry</th>
+                    <th scope="col" class="govuk-table__header">Error</th>
+                  </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
+                    <td class="govuk-table__cell">18</td>
+                    <td class="govuk-table__cell">F</td>
+                    <td class="govuk-table__cell">145,00P</td>
+                    <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Facility utilisation must be a number</span></td>
+                  </tr>
+                  <!--<tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{ data['facility-2-name'] }}</td>
+                    <td class="govuk-table__cell">19</td>
+                    <td class="govuk-table__cell">F</td>
+                    <td class="govuk-table__cell">99,736,632.56</td>
+                    <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Facility utilisation cannot be more than GBP&nbsp;25&nbsp;million</span></td>
+                  </tr>-->
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
+                    <td class="govuk-table__cell">20</td>
+                    <td class="govuk-table__cell">H</td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Total fees accrued must have an entry</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{ data['facility-5-name'] }}</td>
+                    <td class="govuk-table__cell">23</td>
+                    <td class="govuk-table__cell">J</td>
+                    <td class="govuk-table__cell">1e5.67</td>
+                    <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Monthly fees paid to UKEF must be a number</span></td>
+                  </tr>
+                  <!--<tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{ data['facility-10-name'] }}</td>
+                    <td class="govuk-table__cell">24</td>
+                    <td class="govuk-table__cell">J</td>
+                    <td class="govuk-table__cell">sterling</td>
+                    <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Currency must be a 3 character currency code</span></td>
+                  </tr>-->
+                </tbody>
+              </table>
         </div> 
         
         <div class="govuk-form-group">
@@ -94,7 +106,7 @@
           <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
         </div>
         <div class="govuk-form-group">
-        <form class="form" action="check-filename" method="get">
+        <form class="form" action="check-upload" method="get">
           {{ govukButton({
               text: "Continue"
             }) }}

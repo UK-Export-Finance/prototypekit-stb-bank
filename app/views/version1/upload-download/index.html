@@ -24,67 +24,35 @@
 
     <h1 class="govuk-heading-l">Facility reporting</h1>
 
-    {% if 'false' in data['report-uploaded'] %} 
+    {% if 'due' in data['report-uploaded'] %} 
     <!-- 1st visit to page show report due / download information -->
       <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
-          <p class="govuk-body"><a href="facilities" class="govuk-link govuk-link--no-visited-state">All issued facilities</a> must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
-          <p class="govuk-body"><a href="#" class="govuk-link">Download the UKEF {{ data['report-month'] }} template.xlsx (95kB)</a></p>
-          
-          <h2 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--m" for="event-name">
-             Upload report
-            </label>
-          </h2>
+          <p class="govuk-body">All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
+          <button class="govuk-button" data-module="govuk-button">
+            Download {{ data['report-month'] }} template
+          </button>
 
-          <div class="govuk-form-group">
-              
-            <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint"> 
-          </div>
-          <div class="govuk-form-group">
-            <form class="form" action="/version1/upload-download/problem" method="get">
-            {{ govukButton({
-                text: "Continue"
-              }) }}
-              <input type="hidden" name="report-uploaded" value="true">
-          </form>
-        </div>
-
-        {% elif 'true' in data['report-uploaded'] %} 
-        <!-- 1st visit to page show report due / download information -->
-          <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
-          <p class="govuk-body"><a href="facilities" class="govuk-link govuk-link--no-visited-state">All issued facilities</a> must be updated and submitted to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} template.</p>
-
-              <p class="govuk-body"><a href="#" class="govuk-link">Download the UKEF {{ data['report-month'] }} template.xlsx (95kB)</a></p>
-              
-              <h2 class="govuk-label-wrapper">
-                <label class="govuk-label govuk-label--m" for="event-name">
-                 Upload report
-                </label>
-              </h2>
-    
-              <div class="govuk-form-group">
-                  
-                <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
-              </div>
-              <div class="govuk-form-group">
-              <form class="form" action="check-filename" method="get">
-                {{ govukButton({
-                    text: "Continue"
-                  }) }}
-                  <input type="hidden" name="report-uploaded" value="success">
-              </form>
-            </div>
-
-    {% elif 'success' in data['report-uploaded'] %}
+    {% elif 'sent' in data['report-uploaded'] %}
     <!-- Report has been submitted - show different info -->      
     <h2 class="govuk-heading-m">No report due</h2>
 
-    <p class="govuk-body">The {{ data['report-month'] }} report was submitted by {{ data['signed-in-name'] }} on {{ data['todays-date'] }} at 10:56am.</p>
+    <p class="govuk-body">The {{ data['report-month'] }} report was sent to UKEF by {{ data['signed-in-name'] }} on {{ data['todays-date'] }} at 10:56am.</p>
 
     <p class="govuk-body">The {{ data['next-month-report'] }} report template will be available to download on {{ data['start-next-month'] }}.</p>
 
     <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
 
+    {% elif 'overdue' in data['report-uploaded'] %}
+    <!-- 2nd visit to page - upload will be a success -->
+    <h2 class="govuk-heading-m">{{ data['report-month'] }} report is overdue</h2>
+    
+    <div class="govuk-inset-text">
+      All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> using the UKEF {{ data['report-month'] }} template.
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button">
+      Download {{ data['report-month'] }} template
+    </button>
     {% endif %}
   </div>      
 
