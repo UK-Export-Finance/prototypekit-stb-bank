@@ -21,8 +21,8 @@ module.exports = {
   'start-last-month': '1 June 2023',
   'start-next-month': '1 August 2023',
   '1-month-ago': '4 June 2023',
-  'todays-date': '4 July 2023',
-  'todays-date-full': '7 July 2023',
+  'todays-date': '5 July 2023',
+  'todays-date-full': '5 July 2023',
   'this-month-report-due': '14 July 2023',
   'next-month-report-due': '14 August 2023',
 
@@ -132,8 +132,8 @@ module.exports = {
   'facility-4paid-updated': 'no',
   'facility-4accrued-updated': 'no',
   
-  'facility-4-base-currency': 'GBP',
-  'facility-4-fee-currency': 'GBP',
+  'facility-4-base-currency': 'JPY',
+  'facility-4-fee-currency': 'JPY',
   'facility-4-start-date': '15 March 2021',
   'facility-4-end-date': '15 March 2026',
   'facility-4-end-date-short': '15 Mar 2026',
