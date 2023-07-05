@@ -80,7 +80,7 @@ endblock %} {% block beforeContent %} {% endblock %} {% block content %}
 
     <p class="govuk-body">
       The {{ data['report-month'] }} report was submitted by {{
-      data['signed-in-name'] }} on {{ data['todays-date'] }} at 10:56am.
+      data['signed-in-name'] }} on {{ "today" | govukDate }} at 10:56am.
     </p>
 
     <p class="govuk-body">

@@ -21,8 +21,6 @@ module.exports = {
   'start-last-month': '1 June 2023',
   'start-next-month': '1 August 2023',
   '1-month-ago': '4 June 2023',
-  'todays-date': '5 July 2023',
-  'todays-date-full': '5 July 2023',
   'this-month-report-due': '14 July 2023',
   'next-month-report-due': '14 August 2023',
 
@@ -35,6 +33,10 @@ module.exports = {
   'last-month-only': 'May',
   '3rd-month-only': 'April',
   '4th-month-only': 'March',
+
+  // Using the filter for today's date
+  //'todays-date': '5 July 2023',
+  // 'todays-date-full': '5 July 2023',
 
   // FACILITY 1 VALUES
   'facility-1-updated': 'no',
