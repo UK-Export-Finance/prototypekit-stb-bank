@@ -22,7 +22,7 @@
 
   <div class="govuk-grid-column-two-thirds">
 
-    <h1 class="govuk-heading-l">Facility reporting</h1>
+    <h1 class="govuk-heading-l">General Export Facility reporting</h1>
 
     {% if 'due' in data['report-uploaded'] %} 
     <!-- 1st visit to page show report due / download information -->
@@ -38,7 +38,7 @@
     <!-- Report has been submitted - show different info -->      
     <h2 class="govuk-heading-m">Report not due</h2>
 
-    <p class="govuk-body">The {{ data['report-month'] }} report was sent to UKEF by {{ data['signed-in-name'] }} on {{ data['todays-date'] }} at 10:56am.</p>
+    <p class="govuk-body">The {{ data['report-month'] }} GEF report was sent to UKEF by {{ data['signed-in-name'] }} on {{ data['todays-date'] }} at 10:56am.</p>
 
     <p class="govuk-body">The {{ data['next-month-report'] }} report template will be available to download on {{ data['start-next-month'] }}.</p>
 
