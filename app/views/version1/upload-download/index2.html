@@ -1,0 +1,51 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Home – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/upload-download/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/upload-download/includes/primary-nav-index-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">General Export Facility reporting</h1>
+
+    <h2 class="govuk-heading-m">{{ data['report-month'] }} status report is due</h2>
+
+    <div class="govuk-inset-text">All issued facilities must be updated and sent to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} Excel template.</div>
+
+    <p class="govuk-body">You must:</p>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>Download the UKEF {{ data['report-month'] }} Excel template.</li>
+        <li>For all the facilities listed enter the facility utilisation, fees accrued and fees paid to UKEF for the period.</li>
+        <li>Upload and send the report to UKEF.</li>
+      </ol>
+    
+      <form class="form" action="/public/downloads/UKEF-facility-report-June-2023.xlsx" method="get">
+        <button class="govuk-button" data-module="govuk-button">
+          Download {{ data['report-month'] }} Excel template
+        </button>
+      </form>
+
+      <p class="govuk-body">The template for the July 2023 report will be available to download on 1&nbsp;August&nbsp;2023.</p>
+
+  </div>      
+
+</div>
+
+{% endblock %}
