@@ -35,16 +35,18 @@
 
     <ol class="govuk-list govuk-list--number">
         <li>Download the UKEF {{ data['report-month'] }} Excel template.</li>
-        <li>Enter the facility utilisation, fees accrued and fees paid to UKEF for all the facilities listed, for the period.</li>
-        <li>Upload and send the report to UKEF.</li>
+        <li>Enter the facility utilisation, total fees accrued and fee payable to UKEF for all the facilities listed for the reporting period.</li>
+        <li>Provide a payment reference for the fee payable to UKEF.</li>
+        <li><a href="upload" class="govuk-link govuk-link--no-visited-state">Upload and send</a> the report to UKEF.</li>
       </ol>
-    
+      
+      <div class="govuk-form-group govuk-!-margin-top-7">
       <form class="form" action="/public/downloads/UKEF-facility-report-June-2023.xlsx" method="get">
         <button class="govuk-button" data-module="govuk-button">
           Download {{ data['report-month'] }} Excel template
         </button>
       </form>
-
+    </div> 
       <!--<p class="govuk-body">The template for the September 2023 report will be available to download on 1&nbsp;October&nbsp;2023.</p>-->
     {% elif 'sent' in data['report-uploaded'] %}
     <!-- Report has been submitted - show different info -->      
@@ -52,21 +54,38 @@
 
     <p class="govuk-body">The {{ data['report-month'] }} GEF report was sent to UKEF by {{ data['signed-in-name'] }} on {{ "today" | govukDate }} at {{ "now" | govukTime }}.</p>
 
-    <p class="govuk-body">The template for the September 2023 report will be available to download on 1&nbsp;October&nbsp;2023.</p>
+    <p class="govuk-body">The template for the {{ data['next-month-report'] }} report will be available to download on 1&nbsp;August&nbsp;2023.</p>
 
     <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
 
-    {% elif 'overdue' in data['report-uploaded'] %}
+    {% elif 'late' in data['report-uploaded'] %}
     <!-- Report is overdue -->
     <h2 class="govuk-heading-m">{{ data['report-month'] }} report is overdue</h2>
     
-    <div class="govuk-inset-text">
-      All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> using the UKEF {{ data['report-month'] }} Excel template.
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        All issued facilities must be updated and sent to UKEF using the UKEF {{ data['report-month'] }} Excel template.
+      </strong>
     </div>
 
-    <button class="govuk-button" data-module="govuk-button">
-      Download {{ data['report-month'] }} Excel template
-    </button>
+    <p class="govuk-body">You must:</p>
+
+    <ol class="govuk-list govuk-list--number">
+      <li>Download the UKEF {{ data['report-month'] }} Excel template.</li>
+      <li>Enter the facility utilisation, total fees accrued and fee payable to UKEF for all the facilities listed for the reporting period.</li>
+      <li>Provide a payment reference for the fee payable to UKEF.</li>
+      <li><a href="upload" class="govuk-link govuk-link--no-visited-state">Upload and send</a> the report to UKEF.</li>
+    </ol>
+    
+    <div class="govuk-form-group govuk-!-margin-top-7">
+      <form class="form" action="/public/downloads/UKEF-facility-report-June-2023.xlsx" method="get">
+        <button class="govuk-button" data-module="govuk-button">
+          Download {{ data['report-month'] }} Excel template
+        </button>
+      </form>
+    </div> 
     {% endif %}
   </div>      
 

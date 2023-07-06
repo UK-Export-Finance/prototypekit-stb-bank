@@ -22,18 +22,29 @@
 
     <div class="govuk-grid-column-two-thirds">
   
-      <div class="govuk-form-group">
+
   
+        {% if ('due' in data['report-uploaded']) or ('overdue' in data['report-uploaded']) %}  
+        <!-- 1st visit to page show report due / download information -->
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--l" for="event-name">
            Upload report
           </label>
         </h1>
-  
-        {% if ('due' in data['report-uploaded']) or ('overdue' in data['report-uploaded']) %}  
-        <!-- 1st visit to page show report due / download information -->
+
         <div class="govuk-form-group">
-          <p class="govuk-body">You must use the UKEF <a class="govuk-link--no-visited-state" href="index">{{ data['report-month'] }} template</a>.</p>
+
+          <p class="govuk-body">For each issued facility you must provide:</p>
+          <ol class="govuk-list govuk-list--number">
+            <li>Facility utilisation accurate on the reporting date.</li>
+            <li>The total fees accrued.</li>
+            <li>The fee payable to UKEF.</li>
+            <li>A payment reference for the fee payable to UKEF.</li>
+          </ol>
+
+          <p class="govuk-body">If there has been no movement against a facility you must still report this.</p>
+
+          <p class="govuk-body">You must provide this information in the UKEF <a class="govuk-link--no-visited-state" href="index">{{ data['report-month'] }} template</a>.</p>
             
           <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
         </div>
@@ -61,10 +72,17 @@
   
       {% elif 'sent' in data['report-uploaded'] %}
       <!-- Report has been submitted - show different info -->
-      <p class="govuk-body">The {{ data['report-month'] }} report has already been sent to UKEF.</p>
-      <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
+      <h1 class="govuk-heading-l">Upload report</h1>
+      
+      <h2 class="govuk-heading-m">Status report not due</h2>
+
+    <p class="govuk-body">The {{ data['report-month'] }} GEF report was sent to UKEF by {{ data['signed-in-name'] }} on {{ "today" | govukDate }} at {{ "now" | govukTime }}.</p>
+
+    <p class="govuk-body">The template for the {{ data['next-month-report'] }} report will be available to download on 1&nbsp;August&nbsp;2023.</p>
+
+    <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
       {% endif %}
   
   </div>
-
+</div>
 {% endblock %}
