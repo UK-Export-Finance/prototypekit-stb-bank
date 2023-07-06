@@ -25,22 +25,34 @@
     <h1 class="govuk-heading-l">General Export Facility reporting</h1>
 
     {% if 'due' in data['report-uploaded'] %} 
-    <!-- 1st visit to page show report due / download information -->
-      <h2 class="govuk-heading-m">{{ data['report-month'] }} report is due</h2>
-          <p class="govuk-body">All <a class="govuk-link--no-visited-state" href="facilities">issued facilities</a> must be updated and <a class="govuk-link--no-visited-state" href="upload">sent to UKEF</a> by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} Excel template.</p>
-          <form class="form" action="/public/downloads/UKEF-facility-report-June-2023.xlsx" method="get">
-            <button class="govuk-button" data-module="govuk-button">
-              Download {{ data['report-month'] }} Excel template
-            </button>
-          </form>
+    <!-- Report is due -->
+    
+    <h2 class="govuk-heading-m">{{ data['report-month'] }} status report is due</h2>
 
+    <div class="govuk-inset-text">All issued facilities must be updated and sent to UKEF by {{ data['this-month-report-due'] }} using the UKEF {{ data['report-month'] }} Excel template.</div>
+
+    <p class="govuk-body">You must:</p>
+
+    <ol class="govuk-list govuk-list--number">
+        <li>Download the UKEF {{ data['report-month'] }} Excel template.</li>
+        <li>Enter the facility utilisation, fees accrued and fees paid to UKEF for all the facilities listed, for the period.</li>
+        <li>Upload and send the report to UKEF.</li>
+      </ol>
+    
+      <form class="form" action="/public/downloads/UKEF-facility-report-June-2023.xlsx" method="get">
+        <button class="govuk-button" data-module="govuk-button">
+          Download {{ data['report-month'] }} Excel template
+        </button>
+      </form>
+
+      <!--<p class="govuk-body">The template for the September 2023 report will be available to download on 1&nbsp;October&nbsp;2023.</p>-->
     {% elif 'sent' in data['report-uploaded'] %}
     <!-- Report has been submitted - show different info -->      
-    <h2 class="govuk-heading-m">Report not due</h2>
+    <h2 class="govuk-heading-m">Status report not due</h2>
 
     <p class="govuk-body">The {{ data['report-month'] }} GEF report was sent to UKEF by {{ data['signed-in-name'] }} on {{ "today" | govukDate }} at {{ "now" | govukTime }}.</p>
 
-    <p class="govuk-body">The {{ data['next-month-report'] }} report template will be available to download on {{ data['start-next-month'] }}.</p>
+    <p class="govuk-body">The template for the September 2023 report will be available to download on 1&nbsp;October&nbsp;2023.</p>
 
     <p class="govuk-body">Contact the UKEF team: <a href="#" class="govuk-link--no-visited-state">{{ data['stb-email'] }}</a>.</p> 
 
