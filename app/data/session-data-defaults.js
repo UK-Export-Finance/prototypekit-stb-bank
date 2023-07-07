@@ -6,7 +6,7 @@ module.exports = {
   'bank-name': '',
   'report-uploaded': 'due',
   'visited': 'first-time',
-  'file-name': 'UKEF-facility-report-June-2023.xlsx',
+  'file-name': 'Lloyds-Bank-status-report-June-2023.xlsx',
   'stb-email': 'stb.pim@ukexportfinance.gov.uk',
 
    // Names
