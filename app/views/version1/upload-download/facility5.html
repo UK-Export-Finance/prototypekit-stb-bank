@@ -42,7 +42,18 @@
               Type
             </dt>
             <dd class="govuk-summary-list__value">
+              {% if 'barclays' in data['bank-name'] %}
+              {{ data['facility-5-type-barclays'] }}
+              
+              {% elif 'newable' in data['bank-name'] %}
+              {{ data['facility-5-type-newable'] }}
+
+              {% elif 'virgin' in data['bank-name'] %}
+              {{ data['facility-5-type-virgin'] }}
+            
+              {% elif 'lloyds' in data['bank-name'] %}
               {{ data['facility-5-type'] }}
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
@@ -53,7 +64,18 @@
               Facility description
             </dt>
             <dd class="govuk-summary-list__value">
-              Guarantee
+              {% if 'barclays' in data['bank-name'] %}
+              {{ data['facility-5-description-barclays'] }}
+              
+              {% elif 'newable' in data['bank-name'] %}
+              {{ data['facility-5-description-newable'] }}
+
+              {% elif 'virgin' in data['bank-name'] %}
+              {{ data['facility-5-description-virgin'] }}
+            
+              {% elif 'lloyds' in data['bank-name'] %}
+              {{ data['facility-5-description'] }}
+              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>

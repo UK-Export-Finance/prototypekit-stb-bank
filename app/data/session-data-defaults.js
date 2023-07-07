@@ -86,6 +86,25 @@ module.exports = {
   'facility-24-ref-newable': 'RTPF638',
   'facility-25-ref-newable': 'TNPQ387',
 
+  'facility-1-type-barclays': 'Cash',
+  'facility-2-type-barclays': 'Cash',
+  'facility-4-type-barclays': 'Cash',
+  'facility-5-type-barclays': 'Cash',
+
+  'facility-1-description-barclays': 'Loans',
+  'facility-2-description-barclays': 'Loans',
+  'facility-4-description-barclays': 'Loans',
+  'facility-5-description-barclays': 'Loans',  
+
+  'facility-1-type-newable': 'Cash',
+  'facility-2-type-newable': 'Cash',
+  'facility-4-type-newable': 'Cash',
+  'facility-5-type-newable': 'Cash',
+
+  'facility-1-description-newable': 'Loans',
+  'facility-2-description-newable': 'Loans',
+  'facility-4-description-newable': 'Loans',
+  'facility-5-description-newable': 'Loans',  
 
   // FACILITY 1 VALUES
   'facility-1-updated': 'no',
@@ -94,7 +113,7 @@ module.exports = {
   'facility-1-ref': 'Britannia Energy GEF',
   'facility-1-type': 'Contingent',
   'facility-1-type-short': 'Contingent',
-  'facility-1-description': 'Letters of credit',
+  'facility-1-description': 'Guarantees',
   'facility-1-prob-default': '1.0%',
   'facility-1-limit': '600,000.00',
   'facility-1-limit-sort': '600000.00',
@@ -130,7 +149,7 @@ module.exports = {
   'facility-2-ref': 'FutureTech Innovators',
   'facility-2-type': 'Contingent facility',
   'facility-2-type-short': 'Contingent',
-  'facility-2-description': 'Guarantee',
+  'facility-2-description': 'Guarantees',
   'facility-2-prob-default': '1.2%',
   'facility-2-limit': '300,000.00',
   'facility-2-limit-sort': '300000.00',
