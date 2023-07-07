@@ -183,22 +183,23 @@
         </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Fee paid to UKEF
-          </dt>
-          <dd class="govuk-summary-list__value">
-            {{ data['facility-5-base-currency'] }} {{ data['facility-5-paid'] }} 
-          </dd>
-
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Fees accrued
+            Total fees accrued for the month
           </dt>
           <dd class="govuk-summary-list__value">
             {{ data['facility-5-base-currency'] }} {{ data['facility-5-accrued'] }} 
           </dd>
 
         </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Monthly fees paid to UKEF
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['facility-5-base-currency'] }} {{ data['facility-5-paid'] }} 
+          </dd>
+
+        </div>
+        
       </dl>
   
       <h2 class="govuk-heading-m">Dates</h2>
