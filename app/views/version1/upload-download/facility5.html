@@ -64,7 +64,18 @@
             Bank reference
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['facility-5-ref'] }}
+            {% if 'barclays' in data['bank-name'] %}
+              {{ data['facility-5-ref-barclays'] }}
+              
+              {% elif 'newable' in data['bank-name'] %}
+              {{ data['facility-5-ref-newable'] }}
+
+              {% elif 'virgin' in data['bank-name'] %}
+              {{ data['facility-5-ref-virgin'] }}
+            
+              {% elif 'lloyds' in data['bank-name'] %}
+              {{ data['facility-5-ref'] }}
+              {% endif %}
           </dd>
         </div>
         

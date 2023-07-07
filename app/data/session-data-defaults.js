@@ -3,6 +3,7 @@ module.exports = {
   // Insert values here
   
   //'serviceNameBank': 'Lloyds Bank – Facility reporting',
+  'bank-name': '',
   'report-uploaded': 'due',
   'visited': 'first-time',
   'file-name': 'UKEF-facility-report-June-2023.xlsx',
@@ -37,6 +38,54 @@ module.exports = {
   // Using the filter for today's date
   //'todays-date': '5 July 2023',
   // 'todays-date-full': '5 July 2023',
+
+
+  // Bank ref values: Lloyds by default
+  // 'facility-1-ref': 'Britannia Energy GEF', <<<Lloyds
+  // Other banks here vvv
+
+  'facility-1-ref-barclays': '3001175147',
+  'facility-2-ref-barclays': '3001184276',
+  'facility-4-ref-barclays': '3001193729',
+  'facility-5-ref-barclays': '3001201729',
+  'facility-10-ref-barclays': '3001210542',
+  'facility-11-ref-barclays': '3001224752',
+  'facility-12-ref-barclays': '3001248940',
+  'facility-13-ref-barclays': '3001258036',
+  'facility-14-ref-barclays': '3001269305',
+  'facility-15-ref-barclays': '3001274983',
+  'facility-16-ref-barclays': '3001289791',
+  'facility-17-ref-barclays': '3001291749',
+  'facility-18-ref-barclays': '3001294859',
+  'facility-19-ref-barclays': '3001300128',
+  'facility-20-ref-barclays': '3001300635',
+  'facility-21-ref-barclays': '3001301749',
+  'facility-22-ref-barclays': '3001308367',
+  'facility-23-ref-barclays': '3001313461',
+  'facility-24-ref-barclays': '3001326729',
+  'facility-25-ref-barclays': '3001378304',
+
+  'facility-1-ref-newable': 'SFDH382',
+  'facility-2-ref-newable': 'KFND338',
+  'facility-4-ref-newable': 'KYCT497',
+  'facility-5-ref-newable': 'VLYT164',
+  'facility-10-ref-newable': 'BWYR376',
+  'facility-11-ref-newable': 'DGTR548',
+  'facility-12-ref-newable': 'ZUNU618',
+  'facility-13-ref-newable': 'LDOY342',
+  'facility-14-ref-newable': 'HKVW687',
+  'facility-15-ref-newable': 'UUST479',
+  'facility-16-ref-newable': 'RAHK238',
+  'facility-17-ref-newable': 'RTYW494',
+  'facility-18-ref-newable': 'ETTU878',
+  'facility-19-ref-newable': 'VDGV365',
+  'facility-20-ref-newable': 'YJAP723',
+  'facility-21-ref-newable': 'RTPF657',
+  'facility-22-ref-newable': 'TUJZ340',
+  'facility-23-ref-newable': 'ETCR181',
+  'facility-24-ref-newable': 'RTPF638',
+  'facility-25-ref-newable': 'TNPQ387',
+
 
   // FACILITY 1 VALUES
   'facility-1-updated': 'no',
