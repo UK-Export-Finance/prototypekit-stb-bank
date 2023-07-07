@@ -2,7 +2,6 @@ module.exports = {
 
   // Insert values here
   
-  //'serviceNameBank': 'Lloyds Bank – Facility reporting',
   'bank-name': '',
   'report-uploaded': 'due',
   'visited': 'first-time',
@@ -25,7 +24,6 @@ module.exports = {
   'this-month-report-due': '14 July 2023',
   'next-month-report-due': '14 August 2023',
 
-  'last-month': 'May 2023',
   '3rd-month': 'April 2023',
   '4th-month': 'March 2023',
   '5th-month': 'February 2023',
@@ -55,7 +53,6 @@ module.exports = {
   'facility-23-ref-barclays': '3001313461',
   'facility-24-ref-barclays': '3001326729',
   'facility-25-ref-barclays': '3001378304',
-
   'facility-1-ref-newable': 'SFDH382',
   'facility-2-ref-newable': 'KFND338',
   'facility-4-ref-newable': 'KYCT497',
@@ -76,22 +73,18 @@ module.exports = {
   'facility-23-ref-newable': 'ETCR181',
   'facility-24-ref-newable': 'RTPF638',
   'facility-25-ref-newable': 'TNPQ387',
-
   'facility-1-type-barclays': 'Cash',
   'facility-2-type-barclays': 'Cash',
   'facility-4-type-barclays': 'Cash',
   'facility-5-type-barclays': 'Cash',
-
   'facility-1-description-barclays': 'Loans',
   'facility-2-description-barclays': 'Loans',
   'facility-4-description-barclays': 'Loans',
   'facility-5-description-barclays': 'Loans',  
-
   'facility-1-type-newable': 'Cash',
   'facility-2-type-newable': 'Cash',
   'facility-4-type-newable': 'Cash',
   'facility-5-type-newable': 'Cash',
-
   'facility-1-description-newable': 'Loans',
   'facility-2-description-newable': 'Loans',
   'facility-4-description-newable': 'Loans',
@@ -562,4 +555,4 @@ module.exports = {
 'facility-25-paid': '8,000.00',
 'facility-25-accrued': '30,000.00',
 'facility-25-base-currency': 'GBP',
-}
+};
