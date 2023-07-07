@@ -35,15 +35,6 @@ module.exports = {
   '3rd-month-only': 'April',
   '4th-month-only': 'March',
 
-  // Using the filter for today's date
-  //'todays-date': '5 July 2023',
-  // 'todays-date-full': '5 July 2023',
-
-
-  // Bank ref values: Lloyds by default
-  // 'facility-1-ref': 'Britannia Energy GEF', <<<Lloyds
-  // Other banks here vvv
-
   'facility-1-ref-barclays': '3001175147',
   'facility-2-ref-barclays': '3001184276',
   'facility-4-ref-barclays': '3001193729',
