@@ -42,18 +42,9 @@
               Product type
             </dt>
             <dd class="govuk-summary-list__value">
-              {% if 'barclays' in data['bank-name'] %}
-              {{ data['facility-4-type-barclays'] }}
-              
-              {% elif 'newable' in data['bank-name'] %}
-              {{ data['facility-4-type-newable'] }}
 
-              {% elif 'virgin' in data['bank-name'] %}
-              {{ data['facility-4-type-virgin'] }}
-            
-              {% elif 'lloyds' in data['bank-name'] %}
               {{ data['facility-4-type'] }}
-              {% endif %}
+
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
@@ -64,18 +55,9 @@
               Facility description
             </dt>
             <dd class="govuk-summary-list__value">
-              {% if 'barclays' in data['bank-name'] %}
-              {{ data['facility-4-description-barclays'] }}
-              
-              {% elif 'newable' in data['bank-name'] %}
-              {{ data['facility-4-description-newable'] }}
 
-              {% elif 'virgin' in data['bank-name'] %}
-              {{ data['facility-4-description-virgin'] }}
-            
-              {% elif 'lloyds' in data['bank-name'] %}
               {{ data['facility-4-description'] }}
-              {% endif %}
+
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
@@ -86,18 +68,9 @@
             Primary bank reference
           </dt>
           <dd class="govuk-summary-list__value">
-            {% if 'barclays' in data['bank-name'] %}
-              {{ data['facility-4-ref-barclays'] }}
-              
-              {% elif 'newable' in data['bank-name'] %}
-              {{ data['facility-4-ref-newable'] }}
 
-              {% elif 'virgin' in data['bank-name'] %}
-              {{ data['facility-4-ref-virgin'] }}
-            
-              {% elif 'lloyds' in data['bank-name'] %}
               {{ data['facility-4-ref'] }}
-              {% endif %}
+
           </dd>
         </div>
         
