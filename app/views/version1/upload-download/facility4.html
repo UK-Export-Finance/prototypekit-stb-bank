@@ -68,9 +68,12 @@
             Primary bank reference
           </dt>
           <dd class="govuk-summary-list__value">
+            {% if 'barclays' in data['bank-name'] %}
+            {{ data['facility-4-ref-barclays'] }}
 
-              {{ data['facility-4-ref'] }}
-
+            {% elseif 'lloyds' in data['bank-name'] %}
+            {{ data['facility-4-ref'] }}
+            {% endif %}
           </dd>
         </div>
         

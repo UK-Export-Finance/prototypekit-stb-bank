@@ -42,18 +42,7 @@
               Product type
             </dt>
             <dd class="govuk-summary-list__value">
-              {% if 'barclays' in data['bank-name'] %}
-              {{ data['facility-2-type-barclays'] }}
-              
-              {% elif 'newable' in data['bank-name'] %}
-              {{ data['facility-2-type-newable'] }}
-
-              {% elif 'virgin' in data['bank-name'] %}
-              {{ data['facility-2-type-virgin'] }}
-            
-              {% elif 'lloyds' in data['bank-name'] %}
               {{ data['facility-2-type'] }}
-              {% endif %}
             </dd>
             <dd class="govuk-summary-list__actions">
             </dd>
@@ -77,9 +66,12 @@
             Primary bank reference
           </dt>
           <dd class="govuk-summary-list__value">
+            {% if 'barclays' in data['bank-name'] %}
+            {{ data['facility-2-ref-barclays'] }}
 
-              {{ data['facility-2-ref'] }}
-
+            {% elseif 'lloyds' in data['bank-name'] %}
+            {{ data['facility-2-ref'] }}
+            {% endif %}
           </dd>
         </div>
         
