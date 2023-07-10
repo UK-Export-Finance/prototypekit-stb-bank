@@ -33,7 +33,26 @@ module.exports = {
   '3rd-month-only': 'April',
   '4th-month-only': 'March',
 
-
+  'facility-1-ref-barclays': '3001175147',
+  'facility-2-ref-barclays': '3001184276',
+  'facility-4-ref-barclays': '3001193729',
+  'facility-5-ref-barclays': '3001201721',
+  'facility-10-ref-barclays': '3001210542',
+  'facility-11-ref-barclays': '3001224759',
+  'facility-12-ref-barclays': '3001248940',
+  'facility-13-ref-barclays': '3001258036',
+  'facility-14-ref-barclays': '3001269305',
+  'facility-15-ref-barclays': '3001274983',
+  'facility-16-ref-barclays': '3001289791',
+  'facility-17-ref-barclays': '3001291749',
+  'facility-18-ref-barclays': '3001294859',
+  'facility-19-ref-barclays': '3001300128',
+  'facility-20-ref-barclays': '3001300635',
+  'facility-21-ref-barclays': '3001301749',
+  'facility-22-ref-barclays': '3001308367',
+  'facility-23-ref-barclays': '3001313461',
+  'facility-24-ref-barclays': '3001326729',
+  'facility-25-ref-barclays': '3001378304',
 
   // FACILITY 1 VALUES
   'facility-1-updated': 'no',
