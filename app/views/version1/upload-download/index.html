@@ -41,7 +41,17 @@
       </ol>
       
       <div class="govuk-form-group govuk-!-margin-top-7">
-      <form class="form" action="/public/downloads/Lloyds-Bank-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
+        
+        {% if 'barclays' in data['bank-name'] %}
+        <form class="form" action="/public/downloads/Barclays-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
+        
+        {% elseif 'newable' in data['bank-name'] %}
+        <form class="form" action="/public/downloads/Newable-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">  
+      
+        {% elseif 'lloyds' in data['bank-name'] %}
+        <form class="form" action="/public/downloads/Lloyds-Bank-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
+        
+        {% endif %}
         <button class="govuk-button" data-module="govuk-button">
           Download {{ data['report-month'] }} Excel template
         </button>
