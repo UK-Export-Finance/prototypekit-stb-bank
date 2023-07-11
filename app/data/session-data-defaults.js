@@ -5,7 +5,6 @@ module.exports = {
   'bank-name': '',
   'report-uploaded': 'due',
   'visited': 'first-time',
-  'file-name': 'Lloyds-Bank-status-report-June-2023.xlsx',
   'stb-email': 'stb.pim@ukexportfinance.gov.uk',
 
    // Names
@@ -32,7 +31,13 @@ module.exports = {
   'last-month-only': 'May',
   '3rd-month-only': 'April',
   '4th-month-only': 'March',
+    
+  // FILE NAMES
+  'file-name-lloyds': 'Lloyds-Bank-status-report-June-2023.xlsx',
+  'file-name-barclays': 'Barclays-status-report-June-2023.xlsx',
+  'file-name-newable': 'Newable-status-report-June-2023.xlsx',
 
+  // FACILITY 1 VALUES 
   'facility-1-ref-barclays': '3001175147',
   'facility-2-ref-barclays': '3001184276',
   'facility-4-ref-barclays': '3001193729',

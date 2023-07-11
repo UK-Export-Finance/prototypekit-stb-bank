@@ -44,7 +44,17 @@
         <p class="govuk-body">You can <a href="/public/downloads/gef-errors.pdf" class="govuk-link--no-visited-state" target="_blank">create a PDF of the errors (opens in a new window or tab)</a>.</p>
 
         <div class="govuk-form-group govuk-form-group--error govuk-!-margin-top-7">
-          <h2 class="govuk-heading-m" id="error">Errors found in {{ data['file-name'] }}</h2>
+          <h2 class="govuk-heading-m" id="error">Errors found in 
+            {% if 'barclays' in data['bank-name'] %}
+            {{ data['file-name-barclays'] }}
+
+            {% elif 'newable' in data['bank-name'] %}
+            {{ data['file-name-newable'] }}
+
+            {% elseif 'lloyds' in data['bank-name'] %}
+            {{ data['file-name-lloyds'] }}
+            {% endif %}
+          </h2>
           <p id="passport-issued-error" class="govuk-error-message">
               <span class="govuk-visually-hidden">Error:</span> You must correct these errors before you can upload the report
               </p>

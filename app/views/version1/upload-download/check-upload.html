@@ -32,7 +32,16 @@
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key govuk-!-width-one-third">File uploaded</dt>
         <dd class="govuk-summary-list__value">
-          {{ data['file-name'] }}
+          {% if 'barclays' in data['bank-name'] %}
+          {{ data['file-name-barclays'] }}
+
+          {% elif 'newable' in data['bank-name'] %}
+          {{ data['file-name-newable'] }}
+
+          {% elseif 'lloyds' in data['bank-name'] %}
+          {{ data['file-name-lloyds'] }}
+          {% endif %}
+          
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link--no-visited-state" href="upload">
