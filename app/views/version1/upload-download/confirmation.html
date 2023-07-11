@@ -39,7 +39,17 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-        <p class="govuk-body">A confirmation email has been sent to tradefinance@lloydsbanking.com.</p>
+        <p class="govuk-body">A confirmation email has been sent to
+          {% if 'barclays' in data['bank-name'] %}
+          tradefinance@barclays.com.
+
+          {% elif 'newable' in data['bank-name'] %}
+          tradefinance@newable.co.uk.
+
+          {% elseif 'lloyds' in data['bank-name'] %}
+          tradefinance@lloydsbanking.com.
+          {% endif %}
+        </p>
         {{ govukButton({
             text: "Sign out",
             href: "sign-in"
