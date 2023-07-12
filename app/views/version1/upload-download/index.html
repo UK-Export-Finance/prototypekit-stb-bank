@@ -50,6 +50,9 @@
         
         {% elseif 'clydesdale' in data['bank-name'] %}
         <form class="form" action="/public/downloads/Clydesdale-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
+          
+        {% elseif 'hsbc' in data['bank-name'] %}
+        <form class="form" action="/public/downloads/HSBC-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
 
         {% elseif 'lloyds' in data['bank-name'] %}
         <form class="form" action="/public/downloads/Lloyds-Bank-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">

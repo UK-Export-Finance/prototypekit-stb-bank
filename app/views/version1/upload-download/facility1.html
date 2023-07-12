@@ -48,7 +48,7 @@
             <dd class="govuk-summary-list__value">
               {% if ('barclays' in data['bank-name']) or ('newable' in data['bank-name']) %}
               Cash
-              {% elseif ('lloyds' in data['bank-name']) or ('clydesdale' in data['bank-name']) %}
+              {% elseif ('lloyds' in data['bank-name']) or ('clydesdale' in data['bank-name']) or ('hsbc' in data['bank-name']) %}
               {{ data['facility-1-type'] }}
               {% endif %}
             </dd>
@@ -63,7 +63,7 @@
             <dd class="govuk-summary-list__value">
               {% if ('barclays' in data['bank-name']) or ('newable' in data['bank-name']) %}
               Loans
-              {% elseif ('lloyds' in data['bank-name']) or ('clydesdale' in data['bank-name']) %}
+              {% elseif ('lloyds' in data['bank-name']) or ('clydesdale' in data['bank-name']) or ('hsbc' in data['bank-name']) %}
               {{ data['facility-1-description'] }}
               {% endif %}
             </dd>
@@ -79,9 +79,15 @@
             {% if 'barclays' in data['bank-name'] %}
             {{ data['facility-1-ref-barclays'] }}
 
+            {% elif 'hsbc' in data['bank-name'] %}
+            {{ data['facility-1-ref-hsbc'] }}
+
+            {% elif 'rbs' in data['bank-name'] %}
+            {{ data['facility-1-ref-rbs'] }}
+
             {% elif 'newable' in data['bank-name'] %}
             {{ data['facility-1-ref-newable'] }}
-
+            
             {% elif 'clydesdale' in data['bank-name'] %}
             {{ data['facility-1-ref-clyde'] }}
 

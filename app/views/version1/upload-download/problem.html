@@ -54,6 +54,9 @@
             {% elif 'clydesdale' in data['bank-name'] %}
             {{ data['file-name-clydesdale'] }}
 
+            {% elif 'hsbc' in data['bank-name'] %}
+            {{ data['file-name-hsbc'] }}
+
             {% elseif 'lloyds' in data['bank-name'] %}
             {{ data['file-name-lloyds'] }}
             {% endif %}

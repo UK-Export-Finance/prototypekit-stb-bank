@@ -37,6 +37,7 @@ module.exports = {
   'file-name-barclays': 'Barclays-status-report-June-2023.xlsx',
   'file-name-newable': 'Newable-status-report-June-2023.xlsx',
   'file-name-clydesdale': 'Clydesdale-status-report-June-2023.xlsx',
+  'file-name-hsbc': 'HSBC-status-report-June-2023.xlsx',
 
   // BARCLAYS VALUES 
   'facility-1-ref-barclays': 'Britannia Energy GEF',
@@ -103,6 +104,29 @@ module.exports = {
   'facility-23-ref-newable': 'PPS ETCR181',
   'facility-24-ref-newable': 'SynopSolutions RTPF638',
   'facility-25-ref-newable': 'Cryo Construction TNPQ387',
+
+  // HSBC VALUES 
+  'facility-1-ref-hsbc': '1087364925',
+  'facility-2-ref-hsbc': '1084598271',
+  'facility-4-ref-hsbc': '1082910564',
+  'facility-5-ref-hsbc': '1086041398',
+  'facility-10-ref-hsbc': '1088754126',
+  'facility-11-ref-hsbc': '1083127694',
+  'facility-12-ref-hsbc': '1089486753',
+  'facility-13-ref-hsbc': '1084236189',
+  'facility-14-ref-hsbc': '1087869452',
+  'facility-15-ref-hsbc': '1081593746',
+  'facility-16-ref-hsbc': '1086248519',
+  'facility-17-ref-hsbc': '1083975628',
+  'facility-18-ref-hsbc': '1085412967',
+  'facility-19-ref-hsbc': '1098374625',
+  'facility-20-ref-hsbc': '1094628197',
+  'facility-21-ref-hsbc': '1092913564',
+  'facility-22-ref-hsbc': '1096054398',
+  'facility-23-ref-hsbc': '1098759126',
+  'facility-24-ref-hsbc': '1093124694',
+  'facility-25-ref-hsbc': '1099482753',
+
 
   // FACILITY 1 VALUES
   'facility-1-updated': 'no',
