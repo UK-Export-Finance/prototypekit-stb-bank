@@ -156,7 +156,7 @@ module.exports = {
   'facility-1-name': 'Britannia Energy Ltd',
   'facility-1-ukef-id': '0020001371',
   'facility-1-ref': 'Britannia Energy GEF',
-  'facility-1-type': 'Contingent',
+  'facility-1-type': 'Contingent facility',
   'facility-1-type-short': 'Contingent',
   'facility-1-description': 'Guarantees',
   'facility-1-prob-default': '1.0%',
