@@ -38,6 +38,7 @@ module.exports = {
   'file-name-newable': 'Newable-status-report-June-2023.xlsx',
   'file-name-clydesdale': 'Clydesdale-status-report-June-2023.xlsx',
   'file-name-hsbc': 'HSBC-status-report-June-2023.xlsx',
+  'file-name-rbs': 'Natwest-status-report-June-2023.xlsx',
 
   // BARCLAYS VALUES 
   'facility-1-ref-barclays': 'Britannia Energy GEF',
@@ -126,6 +127,28 @@ module.exports = {
   'facility-23-ref-hsbc': '1098759126',
   'facility-24-ref-hsbc': '1093124694',
   'facility-25-ref-hsbc': '1099482753',
+
+  // RBS VALUES 
+  'facility-1-ref-rbs': 'Brittania GEF bond loan A32',
+  'facility-2-ref-rbs': 'FutureTech GEF bond loan A29',
+  'facility-4-ref-rbs': 'NexGen GEF trade loan A154',
+  'facility-5-ref-rbs': 'GEF trade loan B1',
+  'facility-10-ref-rbs': 'Marine Equipment GEF trade loan B4',
+  'facility-11-ref-rbs': 'Innovate GEF trade loan B7',
+  'facility-12-ref-rbs': 'LuminaTech GEF trade loan B65',
+  'facility-13-ref-rbs': 'GEF trade loan C15',
+  'facility-14-ref-rbs': 'Energy Solutions GEF loan C26',
+  'facility-15-ref-rbs': 'Automation GEF trade loan A11',
+  'facility-16-ref-rbs': 'GEF loan B32',
+  'facility-17-ref-rbs': 'GEF trade loan H56',
+  'facility-18-ref-rbs': 'AirTech GEF  tradeloan D12',
+  'facility-19-ref-rbs': 'GEF loan B115',
+  'facility-20-ref-rbs': 'Mighty Manufacturing GEF trade loan A22',
+  'facility-21-ref-rbs': 'GEF trade loan C12',
+  'facility-22-ref-rbs': 'GEF trade loan D17',
+  'facility-23-ref-rbs': 'PPS GEF trade loan B87',
+  'facility-24-ref-rbs': 'SynopSolutions GEF trade loan H45',
+  'facility-25-ref-rbs': 'Cryo Construction GEF trade loan C11',
 
 
   // FACILITY 1 VALUES
