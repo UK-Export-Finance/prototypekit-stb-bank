@@ -47,7 +47,10 @@
         
         {% elseif 'newable' in data['bank-name'] %}
         <form class="form" action="/public/downloads/Newable-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">  
-      
+        
+        {% elseif 'clydesdale' in data['bank-name'] %}
+        <form class="form" action="/public/downloads/Clydesdale-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
+
         {% elseif 'lloyds' in data['bank-name'] %}
         <form class="form" action="/public/downloads/Lloyds-Bank-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
         
