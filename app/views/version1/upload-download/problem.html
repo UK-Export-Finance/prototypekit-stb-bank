@@ -41,7 +41,26 @@
           </div>
         </div>
         
-        <p class="govuk-body">You can <a href="/public/downloads/gef-errors.pdf" class="govuk-link--no-visited-state" target="_blank">create a PDF of the errors (opens in a new window or tab)</a>.</p>
+        <p class="govuk-body">You can 
+          {% if 'barclays' in data['bank-name'] %}
+          <a href="/public/downloads/errors-barclays.pdf" class="govuk-link--no-visited-state" target="_blank">
+
+            {% elif 'newable' in data['bank-name'] %}
+            <a href="/public/downloads/errors-newable.pdf" class="govuk-link--no-visited-state" target="_blank">
+
+            {% elif 'rbs' in data['bank-name'] %}
+            <a href="/public/downloads/errors-rbs.pdf" class="govuk-link--no-visited-state" target="_blank">
+
+            {% elif 'clydesdale' in data['bank-name'] %}
+            <a href="/public/downloads/errors-clydesdale.pdf" class="govuk-link--no-visited-state" target="_blank">
+            
+              {% elif 'hsbc' in data['bank-name'] %}
+              <a href="/public/downloads/errors-hsbc.pdf" class="govuk-link--no-visited-state" target="_blank">
+
+            {% elseif 'lloyds' in data['bank-name'] %}
+            <a href="/public/downloads/errors-lloyds.pdf" class="govuk-link--no-visited-state" target="_blank">
+            {% endif %}
+          create a PDF of the errors (opens in a new window or tab)</a>.</p>
 
         <div class="govuk-form-group govuk-form-group--error govuk-!-margin-top-7">
           <h2 class="govuk-heading-m" id="error">Errors found in 
@@ -82,28 +101,28 @@
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
                     <td class="govuk-table__cell">4</td>
-                    <td class="govuk-table__cell">J</td>
+                    <td class="govuk-table__cell">G</td>
                     <td class="govuk-table__cell">34538e.54</td>
                     <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Facility utilisation must be a number</span></td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
                     <td class="govuk-table__cell">6</td>
-                    <td class="govuk-table__cell">K</td>
+                    <td class="govuk-table__cell">H</td>
                     <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Total fees accrued for the month must have an entry</span></td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell">Automation Solutions Ltd</td>
                     <td class="govuk-table__cell">13</td>
-                    <td class="govuk-table__cell">J</td>
+                    <td class="govuk-table__cell">G</td>
                     <td class="govuk-table__cell">5,537,938.65</td>
                     <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Facility utilisation cannot be more than facility limit</span></td>
                   </tr>
                   <tr class="govuk-table__row">
                     <td class="govuk-table__cell">ADB Aeronautics Ltd</td>
                     <td class="govuk-table__cell">17</td>
-                    <td class="govuk-table__cell">L</td>
+                    <td class="govuk-table__cell">I</td>
                     <td class="govuk-table__cell">6p1.41</td>
                     <td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Monthly fees paid to UKEF must be a number</span></td>
                   </tr>
