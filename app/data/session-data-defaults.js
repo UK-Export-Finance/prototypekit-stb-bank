@@ -68,7 +68,7 @@ module.exports = {
   'facility-4-ref-clyde': 'NexGen Robotics Guarantees',
   'facility-5-ref-clyde': '2.5m cash facility',
   'facility-10-ref-clyde': '2.5m cash facility',
-  'facility-11-ref-clyde': 'Innovate Solutions Fuarantees',
+  'facility-11-ref-clyde': 'Innovate Solutions Guarantees',
   'facility-12-ref-clyde': '1m cash facility',
   'facility-13-ref-clyde': '700k cash facility',
   'facility-14-ref-clyde': '800k cash facility',
