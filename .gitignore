@@ -1,0 +1,11 @@
+# Prototype ignores - per-user
+.tmp/
+.env
+migrate.log
+usage-data-config.json
+
+node_modules/
+
+# General ignores
+.DS_Store
+.idea
