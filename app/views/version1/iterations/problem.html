@@ -1,0 +1,108 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Check the report – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% include "/version1/iterations/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/iterations/includes/primary-nav-index-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="upload">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+      	<h1 class="govuk-heading-l">Check the report</h1>
+      	<div class="govuk-error-summary" data-module="govuk-error-summary">
+        	<div role="alert">
+				<h2 class="govuk-error-summary__title">
+				There is a problem
+				</h2>
+				<div class="govuk-error-summary__body">
+					<ul class="govuk-list govuk-error-summary__list">
+						<li>
+							<a href="#error">You must correct these errors before you can upload the report</a>
+						</li>
+					</ul>
+				</div>
+          	</div>
+        </div>
+        
+        <p class="govuk-body">You can <a href="/public/downloads/errors-barclays.pdf" class="govuk-link" target="_blank"> download a PDF of the errors (opens in a new window or tab)</a>.</p>
+
+        <div class="govuk-form-group govuk-form-group--error govuk-!-margin-top-7">
+          	<h2 class="govuk-heading-m" id="error">Errors found in {{ data['file-name-barclays'] }}</h2>
+          	<p id="passport-issued-error" class="govuk-error-message">
+              	<span class="govuk-visually-hidden">Error:</span> You must correct these errors before you can upload the report
+            </p>
+				<table class="govuk-table">
+					<caption class="govuk-table__caption govuk-table__caption--m"></caption>
+					<thead class="govuk-table__head">
+					<tr class="govuk-table__row">
+						<th scope="col" class="govuk-table__header">Exporter</th>
+						<th scope="col" class="govuk-table__header">Row</th>
+						<th scope="col" class="govuk-table__header">Column</th>
+						<th scope="col" class="govuk-table__header">Entry</th>
+						<th scope="col" class="govuk-table__header">Error</th>
+					</tr>
+					</thead>
+					<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">{{ data['facility-1-name'] }}</td>
+						<td class="govuk-table__cell">4</td>
+						<td class="govuk-table__cell">G</td>
+						<td class="govuk-table__cell">34538e.54</td>
+						<td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Facility utilisation must be a number</span></td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">{{ data['facility-4-name'] }}</td>
+						<td class="govuk-table__cell">6</td>
+						<td class="govuk-table__cell">H</td>
+						<td class="govuk-table__cell"></td>
+						<td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Total fees accrued for the month must have an entry</span></td>
+					</tr>
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">ADB Aeronautics Ltd</td>
+						<td class="govuk-table__cell">17</td>
+						<td class="govuk-table__cell">I</td>
+						<td class="govuk-table__cell">6p1.41</td>
+						<td class="govuk-table__cell"><span class="govuk-error-message govuk-!-margin-bottom-0">Monthly fees paid to UKEF must be a number</span></td>
+					</tr>
+					</tbody>
+				</table>
+        </div> 
+        
+		<form class="form" action="/version1/iterations/check-file" method="get">
+			<div class="govuk-form-group">  
+				<label class="govuk-label govuk-label--m" for="file-upload-1">
+					Upload the report again
+				</label>  
+				<div id="event-name-hint" class="govuk-hint">
+					You can upload the corrected report now or come back later and upload it
+				</div>  
+				<input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+			</div>
+		
+			{{ govukButton({
+			  text: "Continue"
+			}) }}
+
+		</form>  
+  	</div>      
+</div>
+
+{% endblock %}
+
+
