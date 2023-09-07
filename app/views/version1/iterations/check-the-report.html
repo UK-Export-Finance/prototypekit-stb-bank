@@ -17,7 +17,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a class="govuk-back-link" href="upload">Back</a>
+	<a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -84,7 +84,7 @@
 				</table>
         </div> 
         
-		<form class="form" action="/version1/iterations/check-file" method="get">
+		<form class="form" action="/version1/iterations/file-successfully-validated" method="get">
 			<div class="govuk-form-group">  
 				<label class="govuk-label govuk-label--m" for="file-upload-1">
 					Upload the report again
