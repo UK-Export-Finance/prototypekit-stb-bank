@@ -1,0 +1,54 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  File successfully validated – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/iterations/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/version1/iterations/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/iterations/includes/primary-nav-index-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="index">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h1 class="govuk-heading-l">File successfully validated</h1>
+
+    <p class="govuk">Check it's the correct file before sending.</p>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key govuk-!-width-one-third">File name</dt>
+        <dd class="govuk-summary-list__value">
+          {{ data['file-name-barclays'] }}
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link--no-visited-state" href="index">
+            Change<span class="govuk-visually-hidden"> file</span>
+          </a>
+        </dd>
+      </div>
+      
+    </dl>
+    <!--<h2 class="govuk-heading-m">Is this the correct report?</h2>-->
+    <form class="form" action="confirmation" method="get">
+      <input type="hidden" name="report-uploaded" value="sent" />
+      {{ govukButton({ text: "Confirm and send" }) }}
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
