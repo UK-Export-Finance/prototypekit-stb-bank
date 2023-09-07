@@ -1,0 +1,45 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Confirmation – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/iterations/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/version1/iterations/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/iterations/includes/primary-nav-nothing-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              {{ data['report-month'] }} GEF report sent to UKEF
+            </h1>
+        </div>
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<p class="govuk-body">A confirmation email has been sent to tradefinance@barclays.com.</p>
+		{{ govukButton({
+			text: "Sign out",
+			href: "#"
+			}) }}
+	</div>
+</div>
+
+{% endblock %}
