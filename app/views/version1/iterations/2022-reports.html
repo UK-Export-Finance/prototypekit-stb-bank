@@ -1,0 +1,97 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  2023 reports – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/iterations/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/version1/iterations/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/iterations/includes/primary-nav-reports-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+  
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-one-quarter">
+		<nav class="moj-side-navigation" aria-label="Side navigation">
+			<ul class="moj-side-navigation__list">
+			  <li class="moj-side-navigation__item">
+				<a href="previous-reports">2023</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item moj-side-navigation__item--active">
+				<a href="2022-reports" aria-current="location">2022</a>
+			  </li>
+	  
+			  <li class="moj-side-navigation__item">
+				<a href="#3">2021</a>
+			  </li>
+
+			  <li class="moj-side-navigation__item">
+				<a href="#3">2020</a>
+			  </li>
+
+			  <li class="moj-side-navigation__item">
+				<a href="#3">2019</a>
+			  </li>
+			</ul>
+		  </nav>
+    </div>
+    <div class="govuk-grid-column-three-quarters">
+        <h1 class="govuk-heading-l">2022 reports</h1>
+    	<p class="govuk">Reports can be downloaded in the format they were submitted in &ndash; XLSX or CSV files. Each download opens in a new tab or window.</p>
+		<ul class="govuk-list">
+			<li>
+			  <a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">January 2022</a>
+			</li>
+			<li>
+			  <a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">February 2022</a>
+			</li>
+			<li>
+			  <a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">March 2022</a>
+			</li>
+			<li>
+			  <a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">April 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">May 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">June 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">July 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">August 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">September 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">October 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">November 2022</a>
+			</li>
+			<li>
+				<a class="govuk-link" href="#" rel="noreferrer noopener" target="_blank">December 2022</a>
+			</li>
+		  </ul>
+    </div>
+</div>
+
+
+
+{% endblock %}
