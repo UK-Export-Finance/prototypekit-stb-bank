@@ -60,6 +60,9 @@
         {% elseif 'lloyds' in data['bank-name'] %}
         <form class="form" action="/public/downloads/Lloyds-Bank-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
         
+        {% elseif 'santander' in data['bank-name'] %}
+        <form class="form" action="/public/downloads/Santander-status-report-June-2023.xlsx" method="get" rel="noreferrer noopener" target="_blank">
+
         {% endif %}
         <button class="govuk-button" data-module="govuk-button">
           Download {{ data['report-month'] }} Excel template
