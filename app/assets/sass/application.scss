@@ -13,7 +13,7 @@ table.govuk-body-s {
   @media print {
 
     body {
-      .govuk-error-summary {display:none}
+      .govuk-error-summary, .print-hide, .moj-primary-navigation, .govuk-footer__inline-list {display:none}
     }
   
   }

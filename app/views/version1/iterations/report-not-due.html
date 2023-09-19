@@ -1,0 +1,40 @@
+{% extends "govuk-prototype-kit/layouts/govuk-branded.html" %}
+
+{% block pageTitle %}
+  Upload report – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  {% include "/version1/iterations/includes/head.html" %}
+  <div class="moj-header__container">
+    {% include "/version1/iterations/includes/phase-banner.html" %}
+  </div>
+  {% include "/version1/iterations/includes/primary-nav-index-selected.html" %}
+{% endblock %}
+
+{% block pageScripts %}
+  {% include "includes/scripts.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+    <h1 class="govuk-heading-l">General Export Facility reporting</h1>
+
+    <!-- Report is due -->
+    
+    <h2 class="govuk-heading-m">Status report not currently due for upload</h2>
+
+    <p class="govuk-body">The {{ data['next-month-report'] }} report can be uploaded from {{ data['start-next-month'] }}.</p>
+  
+    <p class="govuk-body">The {{ data['report-month'] }} report was sent to UKEF by {{ data['signed-in-name'] }} on 19 July 2023 at 3:55pm.</p>
+    
+    
+  </div>      
+
+</div>
+
+{% endblock %}
